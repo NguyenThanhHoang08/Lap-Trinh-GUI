@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="poll.registerNewAnswer()">Answer poll</button>
+
+    <script>
+        const poll = {
+            question: "What is your favourite programming language?",
+            options: ["0: JavaScript", " 1: Python ", " 2: Rust", " 3: C++"],
+            answers: new Array(4).fill(0),
+
+            registerNewAnswer() {              
+                var i = prompt(this.question + "\n" + this.options);
+                this.answers[i]++;     
+                this.displayResults(this.answers);
+                this.displayResults(this.answers.toString());
+            },
+
+            displayResults(type) {
+                if (Array.isArray(type)) {
+                    console.log(type);
+                }
+                else if (typeof type == "string") {
+                    var s = "Poll results are ";
+                    s += type;
+                    console.log(s);
+                }
+            } 
+        };
+
+            const test1 = [5, 2, 3];
+            const test2 = [1, 5, 3, 9, 6, 1];
+
+            poll.displayResults(test1);
+            poll.displayResults(test1.toString());
+            poll.displayResults(test2);
+            poll.displayResults(test2.toString());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="bill" placeholder="Bill">
+
+        <button onclick="calc()">Calculate</button>
+    </div>
+
+    <script>
+        function calc() {
+            var billAmount = parseInt(document.getElementById("bill").value);
+
+            var tip = billAmount < 50 || billAmount > 300 ? 
+                billAmount * 0.2 : billAmount * 0.15;
+
+            var total = billAmount + tip;
+            
+            console.log("The bill was " + billAmount + ", the tip was " + tip 
+            + " and the total value is " +  total)
+                
+            }
+    </script>
+</body>
+</html>

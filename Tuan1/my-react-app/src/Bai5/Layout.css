@@ -1,0 +1,31 @@
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.leftcol, .midcol, .rightcol {
+  background-color: lightgray;
+  padding: 20px;
+  height: 50vh;
+  text-align: center;
+  border-radius: 20px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

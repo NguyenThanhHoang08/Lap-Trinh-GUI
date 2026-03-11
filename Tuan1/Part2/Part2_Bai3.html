@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="calc()">Calculate</button>
+
+    <script>
+        const mark = {
+            fullname: "Mark Miller",
+            mass: 78,
+            height: 1.69
+        }
+
+        const john = {
+            fullname: "John Smith",
+            mass: 92,
+            height: 1.95
+        }
+
+        mark.calcBMI = function() {
+            var bmi = this.mass / Math.pow(this.height, 2);
+            return bmi;
+        }
+
+        john.calcBMI = function() {
+            var bmi = this.mass / Math.pow(this.height, 2);
+            return bmi;
+        }
+
+        function calc() {
+            var mbmi = mark.calcBMI();
+            var jbmi = john.calcBMI();
+
+            if (mbmi > jbmi) {
+                console.log(mark.fullname + "'s BMI (" + mbmi + ") is higher than " + john.fullname
+                + "'s BMI (" + jbmi + ")");
+            }
+            else if (jbmi > mbmi) {
+                console.log(john.fullname + "'s BMI (" + jbmi + ") is higher than " + mark.fullname
+                + "'s BMI (" + mbmi + ")");
+            }
+        }
+    </script>
+</body>
+</html>

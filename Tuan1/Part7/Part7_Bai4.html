@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const dogs = [ 
+            { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] }, 
+            { weight: 8, curFood: 200, owners: ['Matilda'] }, 
+            { weight: 13, curFood: 275, owners: ['Sarah', 'John'] }, 
+            { weight: 32, curFood: 340, owners: ['Michael'] }, 
+        ]; 
+        
+        dogs.forEach(e => {
+            e.recommendedFood = (e.weight ** 0.75 * 28).toFixed(2);
+        });
+
+        const sarahsDog = dogs.find(dog => dog.owners.includes('Sarah'));
+
+        const ownersEatTooMuch = dogs.filter(dog => 
+            dog.curFood >= (dog.recommendedFood * 1.10)
+        );
+
+        const ownersEatTooLittle = dogs.filter(dog => 
+            dog.curFood <= (dog.recommendedFood * 0.90)
+        );
+
+    //dog.curFood > (dog.recommendedFood * 0.90) && dog.curFood < (dog.recommendedFood * 1.10)
+
+        const logLittle = (arr) => {
+            let o = [];
+            arr.forEach(d => {
+                o = o.concat(d.owners);
+            });
+            console.log(o.join(" and ") + "'s dogs eat too little!");
+        }
+        logLittle(ownersEatTooLittle);
+
+        const logMuch = (arr) => {
+            let o = [];
+            arr.forEach(d => {
+                o = o.concat(d.owners);
+            });
+            console.log(o.join(" and ") + "'s dogs eat too much!");
+        }
+        logMuch(ownersEatTooMuch);
+      
+        const isExact = (dogs.find(dog => dog.curFood == dog.recommendedFood))
+            ? true : false;
+        console.log("dog eating exactly the amount recommended: " + isExact);
+        
+        const isOkay = (dogs.find(dog => dog.curFood > (dog.recommendedFood * 0.90) 
+            && dog.curFood < (dog.recommendedFood * 1.10)))
+            ? true : false;
+        console.log("dog eating okay the amount recommended: " + isOkay);
+
+        console.log(dogs.length);
+        console.log(dogs);
+        console.log(sarahsDog);
+        console.log(ownersEatTooMuch);
+        console.log(ownersEatTooLittle);
+
+        console.log("eating okay");
+        const dogOkay = (dogs.find(dog => dog.curFood > (dog.recommendedFood * 0.90) 
+            && dog.curFood < (dog.recommendedFood * 1.10)));
+        console.log(dogOkay);
+
+        const dogSorted = dogs.sort((a, b) => a.recommendedFood - b.recommendedFood);
+        console.log(dogSorted);
+    </script>
+</body>
+</html>

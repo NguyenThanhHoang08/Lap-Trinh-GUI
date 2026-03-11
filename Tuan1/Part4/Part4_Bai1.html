@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="again" onclick="ev()"
+    style="
+        width: 320px;
+        height: 50px;
+        padding: 10px;
+        border: 2px solid gray;
+        background-color: lightblue;
+        margin: 0;
+    ">
+        Score: 100
+    </div>
+
+    <script>
+        function ev() {
+            const e = document.querySelector(".again");
+            e.style.backgroundColor = "#222";
+        }
+    </script>
+</body>
+</html>

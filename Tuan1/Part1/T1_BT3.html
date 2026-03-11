@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="ds1" placeholder="Dolphins's score 1">
+        <input type="text" id="ds2" placeholder="Dolphins's score 2">
+        <input type="text" id="ds3" placeholder="Dolphins's score 3">
+
+        <input type="text" id="ks1" placeholder="Koalas's score 1">
+        <input type="text" id="ks2" placeholder="Koalas's score 2">
+        <input type="text" id="ks3" placeholder="Koalas's score 3">
+
+        <button onclick="calc()">Calculate</button>
+    </div>
+
+    <script>
+        function calc() {
+            var dscore1 = parseInt(document.getElementById("ds1").value);
+            var dscore2 = parseInt(document.getElementById("ds2").value);
+            var dscore3 = parseInt(document.getElementById("ds3").value);
+
+            var kscore1 = parseInt(document.getElementById("ks1").value);
+            var kscore2 = parseInt(document.getElementById("ks2").value);
+            var kscore3 = parseInt(document.getElementById("ks3").value);
+            
+            var davg = (dscore1 + dscore2 + dscore3) / 3;
+            var kavg = (kscore1 + kscore2 + kscore3) / 3;
+
+            var isDeligible =  davg >= 100 ? true : false;
+            var isKeligible =  kavg >= 100 ? true : false;
+
+            if (!isDeligible && !isKeligible) {
+                console.log("No team wins!");
+                console.log(davg);
+                console.log(kavg);
+            }
+            else if (isDeligible || isKeligible) {
+                if (!isKeligible || davg > kavg) {
+                    console.log("Dolphins wins!");
+                    console.log(davg);
+                    console.log(kavg);
+                }
+                else if (!isDeligible || kavg > davg) {
+                    console.log("Koalas wins!");
+                    console.log(davg);
+                    console.log(kavg);
+                }
+                else if (kavg == davg) {
+                    if (!isKeligible || davg > kavg) {
+                    console.log("Both teams tie!");
+                    console.log(davg);
+                    console.log(kavg);
+                }
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>

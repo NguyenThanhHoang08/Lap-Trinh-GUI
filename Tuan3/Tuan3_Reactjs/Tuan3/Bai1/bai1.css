@@ -1,0 +1,31 @@
+form {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+form div {
+    margin-bottom: 18px;
+}
+
+form input {
+    padding: 7px;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: lightskyblue;
+    padding: 8px 30px;
+}
+
+.info {
+    background-color: lightgray;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    color: black;
+}
+
+.info p{
+    display: flex;
+}

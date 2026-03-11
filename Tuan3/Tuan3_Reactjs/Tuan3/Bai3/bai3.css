@@ -1,0 +1,41 @@
+.searchBar {
+    width: 700px;
+    border-radius: 10px;
+    background-color: lightgray;
+    display: flex;
+    color: black;
+    padding: 5px;
+    align-items: center;
+    text-align: left;
+    margin: auto;
+}
+
+.searchBox label {
+    margin-right: 100px;
+}
+
+.filterBox {
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
+}
+
+.filterBox p {
+    font-size: xx-large;
+    margin: 0;
+}
+
+.prodList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.prodList li {
+    background-color: lightgray;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
+}

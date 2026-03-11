@@ -1,0 +1,65 @@
+.field {
+    padding: 8px;
+    margin: 6px 0px;
+    border-radius: 10px;
+}
+.field:focus {
+    border: white 3px solid;
+    background-color: black;
+}
+
+.login {
+    
+    margin-top: 20px;
+    background-color: dodgerblue;
+    width: 100%;
+}
+
+.frame {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.close{
+    color: grey;
+    background-color: transparent;
+    padding: 0px;
+    font-size: x-large;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper {
+    flex-direction: row-reverse;
+    display: flex;
+    margin: 0px;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}

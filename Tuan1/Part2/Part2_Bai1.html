@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ds1" placeholder="Dolphins score 1">
+    <input type="text" id="ds2" placeholder="Dolphins score 2">
+    <input type="text" id="ds3" placeholder="Dolphins score 3">
+
+    <input type="text" id="ks1" placeholder="Koalas score 1">
+    <input type="text" id="ks2" placeholder="Koalas score 2">
+    <input type="text" id="ks3" placeholder="Koalas score 3">
+
+    <button onclick="calc()">Calculate</button>
+
+    <script>
+        function calc() {
+            var dscore1 = parseInt(document.getElementById("ds1").value);
+            var dscore2 = parseInt(document.getElementById("ds2").value);
+            var dscore3 = parseInt(document.getElementById("ds3").value);
+
+            var kscore1 = parseInt(document.getElementById("ks1").value);
+            var kscore2 = parseInt(document.getElementById("ks2").value);
+            var kscore3 = parseInt(document.getElementById("ks3").value);
+
+            var calcAverage = (a, b, c) => (a + b + c)/3;
+
+            var dAvg = calcAverage(kscore1, kscore2, kscore3);
+            var kAvg = calcAverage(dscore1, dscore2, dscore3);
+
+            function checkWinner(avgDolphins, avgKoalas) {          
+                if (avgDolphins > avgKoalas * 2) {
+                    console.log("Dolphins win (" + avgDolphins + " vs. " + avgKoalas + ")");
+                }
+                else if (avgKoalas > avgDolphins * 2) {
+                    console.log("Koalas win (" + avgKoalas + " vs. " + avgDolphins + ")");
+                }
+                else {
+                    console.log("No team wins!")
+                }
+            }
+
+            checkWinner(dAvg, kAvg);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let checkDogs = (dogsJulia, dogsKate) => {
+            let dogsJ = dogsJulia;
+            dogsJ.splice(0, 1);
+            dogsJ.splice(2, 2);
+            let dogsBoth = dogsJ.concat(dogsKate);
+
+            for (i = 0; i < dogsBoth.length; i++) {
+                let s = (dogsBoth[i] >= 3) ? 
+                    " is an adult, and is " + dogsBoth[i] + "years old" : " is still a puppy";
+                console.log("Dog number" + (i+1) + s);
+            }
+        };
+
+        let calcAverageHumanAge = (ages) => {
+            let sum = 0;
+            let count = 0;
+            for (i = 0; i < ages.length; i++) {
+                dogAges = ages[i];
+                let humanAge = (dogAges <= 2) ?
+                    2 * dogAges : 16 + dogAges * 4;
+                if (humanAge >= 18) {
+                    sum += humanAge;
+                    count++;
+                }
+            }
+            console.log(sum/count);
+        }
+
+        const jd1 = [3, 5, 2, 12, 7];
+        const kd1 = [4, 1, 15, 8, 3];
+        const data = [5, 2, 4, 1, 15, 8, 3];
+        const data1 = [16, 6, 10, 5, 6, 1, 4];
+
+        checkDogs(jd1, kd1);
+        calcAverageHumanAge(data);
+
+    </script>
+</body>
+</html>
