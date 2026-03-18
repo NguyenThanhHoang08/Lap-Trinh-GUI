@@ -1,0 +1,14 @@
+.searchBox {
+    background-color: lightgrey;
+    padding: 14px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.searchBox input {
+    margin-right: 40px;
+}
+
+li {
+    margin-top: 5px;
+}
