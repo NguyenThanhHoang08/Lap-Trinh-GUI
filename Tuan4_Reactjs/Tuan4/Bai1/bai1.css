@@ -1,0 +1,15 @@
+li {
+    list-style: none;
+    background-color: lightslategray;
+    margin: 8px;
+    border-radius: 4px;
+}
+
+li p{
+    margin: 4px;
+}
+
+.iEmail{
+    font-style: italic;
+    margin-top: 0px;
+}
