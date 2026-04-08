@@ -42,15 +42,17 @@ function ListSearchFilter() {
     }
 
     function handleFilter(e) {
-        setCategory(e.target.value);
-        var filter = data.filter((i) => {
-            return i.title.toLowerCase().includes(e.target.value)
-        })
-        if (!category) {
+        const selectedValue = e.target.value;
+        setCategory(selectedValue);
+        if (selectedValue === "") {
             return data;
         }
-        setFilteredData(filter);
-    }
+        const filtered = data.filter((item) => {
+            return item.title.toLowerCase().includes(selectedValue.toLowerCase());
+        });
+
+        setFilteredData(filtered);
+        }
 
     return (
         <>
@@ -63,8 +65,8 @@ function ListSearchFilter() {
 
             <select name="" id="" onChange={handleFilter}>
                 <option value="">Select a category</option>
-                <option value="nihil">nihil</option>
-                <option value="dolorem">dolorem</option>
+                <option value="vegetable">vegetable</option>
+                <option value="dairy">dairy</option>
             </select>
         </div>
 

@@ -1,0 +1,26 @@
+// 1. Keep track of your filter criteria
+const [keyword, setKeyword] = useState("");
+const [category, setCategory] = useState("");
+
+// 2. Automatically calculate the list whenever data, keyword, or category changes
+const filteredData = useMemo(() => {
+  return data.filter((item) => {
+    // Check if it matches the search keyword
+    const matchesSearch = item.title.toLowerCase().includes(keyword.toLowerCase()) || 
+                          item.body.toLowerCase().includes(keyword.toLowerCase());
+    
+    // Check if it matches the category (if one is selected)
+    const matchesCategory = category === "" || item.category === category;
+
+    return matchesSearch && matchesCategory;
+  });
+}, [data, keyword, category]);
+
+// 3. Your handlers become very simple—they just update the criteria
+function handleSearch(e) {
+  setKeyword(e.target.value);
+}
+
+function handleFilter(e) {
+  setCategory(e.target.value);
+}
