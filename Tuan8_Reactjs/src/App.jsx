@@ -9,6 +9,8 @@ import ComponentA from './components/componentA'
 import ComponentB from './components/ComponentB'
 import themeAtom from './states/themeAtom'
 import UI from './components/Theme_UI'
+import Login from './components/Login'
+import Logout from './components/Logout'
 
 function App() {
   var [theme, setTheme] = useRecoilState(themeAtom)
@@ -33,6 +35,10 @@ function App() {
         }
       }>Change theme</button>
       </div>
+
+      <Login></Login>
+
+      <Logout></Logout>
     </>
   )
 }

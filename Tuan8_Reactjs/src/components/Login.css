@@ -1,0 +1,22 @@
+.loginCard {
+    width: 30vw;
+    margin: 30px auto;
+    padding: 3vh;
+    background-color: white;
+    color: black;
+    display: flexbox;
+}
+
+.loginCard button {
+    margin-top: 20px;
+    padding: 10px 50px;
+}
+
+.loginCard div {
+    text-align: left;
+}
+
+input {
+    width: 98%;
+    margin-bottom: 8px;
+}
