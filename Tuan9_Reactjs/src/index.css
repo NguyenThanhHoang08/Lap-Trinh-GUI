@@ -1,0 +1,48 @@
+/* Reset các thiết lập mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* Màu nền nhẹ để nổi bật trang chính */
+}
+
+/* Định dạng thẻ cha để chứa trang có tọa độ absolute */
+#root {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Nếu bạn muốn thấy trang ở tọa độ cực xa, bạn cần cho phép cuộn */
+  /* overflow: auto; */ 
+}
+
+/* Yêu cầu cụ thể của bạn */
+.page {
+  margin: 0 auto;
+  width: 1440px; 
+  height: 900px; 
+  background: #FFFFFF;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Đổ bóng để dễ nhận diện */
+}
+
+/* Overlay cho Modal */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

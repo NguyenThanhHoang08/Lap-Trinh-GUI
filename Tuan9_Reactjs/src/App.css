@@ -1,0 +1,19 @@
+/* Theo đúng thông số bạn yêu cầu */
+.page {
+  left: 0;
+  width: 1440px;
+  height: 900px;
+  background: #FFFFFFFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}

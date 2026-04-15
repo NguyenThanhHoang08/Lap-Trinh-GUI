@@ -1,0 +1,51 @@
+.hero-container {
+  width: 100%;
+  height: calc(900px - 60px); /* Trừ đi chiều cao của Navbar */
+  background-image: url('https://images.unsplash.com/photo-1556910103-1c02745aae4d'); /* Ảnh nền gian bếp */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.recipe-tag {
+  background: #ffecb3;
+  color: #f57c00;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hero-title {
+  font-size: 36px;
+  margin: 15px 0;
+  color: #333;
+}
+
+.hero-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.view-recipe-btn {
+  background: #d13d6d;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
