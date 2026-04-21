@@ -1,7 +1,8 @@
 import React from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+// Nhận props onLoginClick từ App.jsx
+const Navbar = ({ onLoginClick }) => {
   return (
     <nav className="navbar">
       <div className="logo">
@@ -18,7 +19,15 @@ const Navbar = () => {
         <li>About Us</li>
       </ul>
       <div className="auth-buttons">
-        <button className="btn-login">Login</button>
+        <button 
+          className="btn-login" 
+          onClick={() => {
+            console.log("Navbar Button Internally Clicked!"); // Local log
+            onLoginClick(); // Prop call
+          }}
+        >
+          Login
+        </button>
         <button className="btn-subscribe">Subscribe</button>
       </div>
     </nav>

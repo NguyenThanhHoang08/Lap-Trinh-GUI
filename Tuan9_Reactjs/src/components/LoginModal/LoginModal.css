@@ -1,0 +1,111 @@
+.login-modal-container {
+  position: fixed; /* Bắt buộc */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Căn giữa màn hình */
+  
+  width: 880px;
+  height: 520px;
+  background: white;
+  
+  /* QUAN TRỌNG: z-index phải cao hơn .overlay (thường là 10) */
+  z-index: 100; 
+  
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.4);
+}
+
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 102;
+  color: #333;
+}
+
+.login-flex-box {
+  display: flex;
+  width: 100%;
+}
+
+.login-banner {
+  flex: 1;
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+}
+
+.quote-text {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.login-form-area {
+  flex: 1.2;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title { font-size: 28px; margin-bottom: 5px; }
+.hint { color: #666; margin-bottom: 25px; }
+
+.input-field {
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #f9f9f9;
+  margin-bottom: 15px;
+}
+
+.btn-submit {
+  background: #f04e7c;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.or-divider {
+  text-align: center;
+  margin: 20px 0;
+  border-bottom: 1px solid #eee;
+  line-height: 0.1em;
+}
+
+.or-divider span { background: #fff; padding: 0 10px; color: #999; font-size: 12px; }
+
+.policy-text {
+  font-size: 11px;
+  color: #999;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.policy-text span { text-decoration: underline; color: #333; }
+
+.social-group { display: flex; flex-direction: column; gap: 8px; }
+
+.btn-social {
+  padding: 10px;
+  border: 1px solid #f0f0f0;
+  background: #f8faff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
