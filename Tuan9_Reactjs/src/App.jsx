@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer'
 import SignUp from './components/SignUp/SignUp';
 
 function App() {
-  const [activeModal, setActiveModal] = useState('null'); // 'login', 'onboarding', or null
+  const [activeModal, setActiveModal] = useState(null); // 'login', 'onboarding', or null
 
   const closeModal = () => setActiveModal(null);
   const openLogin = () => setActiveModal('login');
