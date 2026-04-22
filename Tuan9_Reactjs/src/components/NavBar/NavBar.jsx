@@ -1,8 +1,8 @@
 import React from 'react';
-import './Navbar.css';
+import './NavBar.css';
 
 // Nhận props onLoginClick từ App.jsx
-const Navbar = ({ onLoginClick, onSignUpClick }) => {
+const NavBar = ({ onLoginClick, onSignUpClick }) => {
   return (
     <nav className="navbar">
       <div className="logo">
@@ -36,4 +36,4 @@ const Navbar = ({ onLoginClick, onSignUpClick }) => {
   );
 };
 
-export default Navbar;
+export default NavBar;
