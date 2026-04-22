@@ -5,6 +5,8 @@ import Hero from './components/Hero/Hero';
 import OnboardingModal from './components/OnboardingModal/OnboardingModal';
 import LoginModal from './components/LoginModal/LoginModal';
 import SearchPage from './components/SearchPage/SearchPage';
+import Footer from './components/Footer/Footer'
+import SignUp from './components/SignUp/SignUp';
 
 function App() {
   const [activeModal, setActiveModal] = useState(null); // 'login', 'onboarding', or null
@@ -12,10 +14,11 @@ function App() {
   const closeModal = () => setActiveModal(null);
   const openLogin = () => setActiveModal('login');
   const openOnboarding = () => setActiveModal('onboarding');
+  const openSignup = () => setActiveModal('signup');
 
   return (
     <div className="page">
-      <Navbar onLoginClick={openLogin} /> 
+      <Navbar onLoginClick={openLogin} onSignUpClick={openSignup} /> 
       
       <Hero onStartClick={openOnboarding} />
 
@@ -30,11 +33,15 @@ function App() {
             {activeModal === 'login' && (
               <LoginModal onClose={closeModal} />
             )}
+            {activeModal === 'signup' && (
+              <SignUp onClose={closeModal} />
+            )}
           </div>
         </div>
       )}
 
-      <SearchPage></SearchPage>
+      {/* <SearchPage></SearchPage> */}
+      <Footer></Footer>
     </div>
   );
 }

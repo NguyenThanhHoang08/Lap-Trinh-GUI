@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.css';
 
 // Nhận props onLoginClick từ App.jsx
-const Navbar = ({ onLoginClick }) => {
+const Navbar = ({ onLoginClick, onSignUpClick }) => {
   return (
     <nav className="navbar">
       <div className="logo">
@@ -12,7 +12,8 @@ const Navbar = ({ onLoginClick }) => {
         <input type="text" placeholder="What would you like to cook?" />
       </div>
       <ul className="nav-links">
-        <li>What to cook</li>
+        <li
+        >What to cook</li>
         <li>Recipes</li>
         <li>Ingredients</li>
         <li>Occasions</li>
@@ -28,7 +29,8 @@ const Navbar = ({ onLoginClick }) => {
         >
           Login
         </button>
-        <button className="btn-subscribe">Subscribe</button>
+        <button className="btn-subscribe"
+        onClick={onSignUpClick}>Subscribe</button>
       </div>
     </nav>
   );

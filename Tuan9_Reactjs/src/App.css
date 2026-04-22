@@ -5,8 +5,7 @@
   background: #FFFFFF;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
-  /* Remove overflow: hidden unless you specifically want to prevent scrolling */
-  overflow-x: hidden; 
+  /* overflow-x: hidden;  */
   position: relative;
 }
 
@@ -28,7 +27,7 @@
 }
 
 .modal-container {
-  background: white;
+  background: none;
   border-radius: 8px;
   /* Add padding or shadows as needed */
 }

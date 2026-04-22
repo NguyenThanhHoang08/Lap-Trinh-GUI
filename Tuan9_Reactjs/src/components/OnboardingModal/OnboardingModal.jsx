@@ -3,7 +3,7 @@ import './OnboardingModal.css';
 
 const OnboardingModal = ({ onClose }) => {
   return (
-    <div className="modal-container">
+    <div className="Onboarding-container">
       <button className="close-btn" onClick={onClose}>✕</button>
       
       <h1 className="modal-title">Discover Chefify</h1>

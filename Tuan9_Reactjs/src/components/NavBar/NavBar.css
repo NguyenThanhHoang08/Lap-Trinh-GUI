@@ -5,7 +5,9 @@
   padding: 10px 40px;
   border-bottom: 1px solid #eeeeee;
   background-color: #fff;
-  
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {

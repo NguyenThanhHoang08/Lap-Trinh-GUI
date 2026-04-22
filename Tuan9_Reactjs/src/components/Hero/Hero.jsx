@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({onStartClick}) => {
   return (
     <div className="hero-container">
       <div className="hero-card">
@@ -11,7 +11,7 @@ const Hero = () => {
           Classic Italian Salad Caprese with tomatoes, fresh mozzarella, 
           herbs, olive oil and balsamic glaze. A refreshing dish for any occasion.
         </p>
-        <button className="view-recipe-btn">View more</button>
+        <button className="view-recipe-btn" onClick={onStartClick}>View more</button>
       </div>
     </div>
   );
